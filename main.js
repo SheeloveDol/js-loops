@@ -33,3 +33,35 @@ for (let i = 0; i < bobsFollowers.length; i++) {
 }
 
 console.log(mutualFollowers)
+console.log('')
+
+
+
+// WHALE SPEAK
+
+// Creating variable to store a phrase
+const input = "I absolutely love coding";
+// Creating array of vowels
+let vowels = ['a', 'e', 'o', 'u', 'i'];
+// Creating empty result array
+let resultArray = [];
+
+
+// Turning input into an array
+const inputArr = input.split('');
+// Iterating through 'input'
+for (let i = 0; i < inputArr.length; i++) {
+  //  console.log(i)
+  for (let j = 0; j < vowels.length; j++) {
+    // console.log(j)
+    if (input[i] === vowels[j]) {
+      resultArray.push(input[i]);
+    }
+  }
+  if (inputArr[i] === 'e' || inputArr[i] === 'u') {
+    resultArray.push(inputArr[i])
+  };
+}
+
+
+console.log(resultArray.join('').toUpperCase())
